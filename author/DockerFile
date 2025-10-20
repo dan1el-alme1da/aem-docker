@@ -1,16 +1,8 @@
 # Usa a imagem base criada anteriormente
 FROM aem-base
 
-
 # Expõe a porta 4502
 EXPOSE 4502
 
-
 # Inicia o AEM no modo Author
-ENTRYPOINT ["java", "-jar", "instance.jar", "-r", "author", "-p", "4502", "-verbose"]
-
-# Explicação:
-
-# Define o contêiner como modo Author (-r author).
-
-# Expõe a porta 4502 (padrão do Author).
+CMD ["java", "-jar", "instance.jar", "-r", "author", "-p", "4502"]

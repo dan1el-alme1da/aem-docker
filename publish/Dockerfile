@@ -7,7 +7,7 @@ EXPOSE 4503
 
 
 # Inicia o AEM no modo Publish
-ENTRYPOINT ["java", "-jar", "instance.jar", "-r", "publish", "-p", "4503", "-verbose"]
+CMD ["java", "-jar", "instance.jar", "-r", "publish", "-p", "4503"]
 
 # Explicação:
 

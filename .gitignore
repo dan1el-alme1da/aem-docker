@@ -1,0 +1,12 @@
+# AEM SDK - Nunca versionar o arquivo real
+instance.jar
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
+
+# Temporários
+*.tmp
+*.temp

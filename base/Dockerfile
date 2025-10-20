@@ -6,21 +6,13 @@ FROM ubuntu
 WORKDIR /opt/aem
 
 
-# Copia o SDK (JAR do AEM)
-COPY instance.jar instance.jar
-
-
 # Instala Java 11
 RUN apt-get update && \
-apt-get install -y curl && \
-apt-get install -y software-properties-common && \
-add-apt-repository ppa:openjdk-r/ppa && \
-apt-get update && \
-apt-get install -y openjdk-11-jdk
+    apt-get install -y openjdk-11-jdk && \
+    rm -rf /var/lib/apt/lists/*
 
-
-# Descompacta o Quickstart
-RUN java -jar instance.jar -unpack
+# Copia o SDK (JAR do AEM) - substitua pelo arquivo real
+COPY instance.jar instance.jar
 
 
 # Explicação:
