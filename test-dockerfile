@@ -1,2 +1,0 @@
-FROM aem-base
-CMD ["echo", "Container funcionando - substitua instance.jar pelo arquivo real do AEM"]
